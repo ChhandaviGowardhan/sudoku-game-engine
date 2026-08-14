@@ -1,4 +1,4 @@
-# 🧩 Sudoku Game & Puzzle Management System
+# 🧩 Sudoku Game Application
 
 A full-stack Sudoku web application that combines **interactive gameplay**, a **Python/Flask backend**, **REST APIs**, **Sudoku solving algorithms**, and **SQL database integration**.
 
@@ -353,65 +353,6 @@ score
 created_at
 ```
 
-## Example Player Table
-
-```sql
-CREATE TABLE player (
-    player_id INTEGER PRIMARY KEY,
-    username VARCHAR(100) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-## Example Game Table
-
-```sql
-CREATE TABLE game (
-    game_id INTEGER PRIMARY KEY,
-    player_id INTEGER,
-    board_size INTEGER NOT NULL,
-    difficulty INTEGER,
-    status VARCHAR(50),
-    score INTEGER,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-    FOREIGN KEY (player_id)
-        REFERENCES player(player_id)
-);
-```
-
-## Example SQL Operations
-
-### Insert Player
-
-```sql
-INSERT INTO player (username)
-VALUES ('Nancy');
-```
-
-### Retrieve Players
-
-```sql
-SELECT *
-FROM player;
-```
-
-### Retrieve Game History
-
-```sql
-SELECT *
-FROM game
-ORDER BY created_at DESC;
-```
-
-### Retrieve Games for a Player
-
-```sql
-SELECT *
-FROM game
-WHERE player_id = 1;
-```
-
 ---
 
 # 🧠 Sudoku Algorithm
@@ -687,39 +628,13 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 cd YOUR_REPOSITORY_NAME
 ```
 
-## 2. Create a Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-```
-
-Activate the environment:
-
-```bash
-venv\Scripts\activate
-```
-
-### macOS / Linux
-
-```bash
-python3 -m venv venv
-```
-
-Activate the environment:
-
-```bash
-source venv/bin/activate
-```
-
-## 3. Install Dependencies
+## 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. Configure the Database
+## 3. Configure the Database
 
 Configure the SQL database according to the project's database implementation.
 
@@ -733,7 +648,7 @@ Configure the database connection and credentials in the application configurati
 
 > **Important:** Do not commit database credentials or `.env` files to GitHub.
 
-## 5. Run the Application
+## 4. Run the Application
 
 ```bash
 python app.py
@@ -772,75 +687,6 @@ response = requests.post(
 
 print(response.json())
 ```
-
----
-
-# 🔐 Configuration & Security
-
-Sensitive information should not be stored directly in the source code.
-
-Examples include:
-
-* Database passwords
-* API keys
-* Secret keys
-* Environment-specific configuration
-
-Use environment variables or a `.env` file for sensitive configuration.
-
-The `.env` file should be excluded from version control using `.gitignore`.
-
----
-
-# 📊 Skills Demonstrated
-
-## Programming
-
-* Python
-* Object-Oriented Programming
-* Data Structures
-* Algorithm Design
-* Constraint-Based Problem Solving
-* Exception Handling
-
-## Backend Development
-
-* Flask
-* REST API Development
-* HTTP Requests
-* JSON
-* Backend Validation
-* API Integration
-
-## Frontend Development
-
-* HTML5
-* CSS3
-* JavaScript
-* DOM Manipulation
-* Fetch API
-* Responsive UI
-
-## Database
-
-* SQL
-* Relational Database Design
-* CRUD Operations
-* Primary Keys
-* Foreign Keys
-* Database Connectivity
-* Data Persistence
-
-## Software Engineering
-
-* Modular Architecture
-* Separation of Concerns
-* Client-Server Architecture
-* RESTful Communication
-* Version Control
-* Git
-* GitHub
-
 ---
 
 # 📈 Future Enhancements
