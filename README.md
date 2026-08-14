@@ -36,7 +36,7 @@ The frontend communicates with the Flask backend using REST APIs. The backend ha
 * Game operations
 * Database communication
 
-### 🏗️ High-Level Architecture
+### High-Level Architecture
 
 ```text
                     USER
@@ -74,7 +74,7 @@ The frontend communicates with the Flask backend using REST APIs. The backend ha
 
 # ✨ Key Features
 
-## 🎮 Interactive Sudoku Gameplay
+## Interactive Sudoku Gameplay
 
 Users can interact directly with the Sudoku grid through the browser.
 
@@ -90,7 +90,7 @@ The application allows users to:
 
 ---
 
-## 🔢 Multiple Board Sizes
+## Multiple Board Sizes
 
 The application supports multiple Sudoku board sizes:
 
@@ -102,7 +102,7 @@ The Sudoku validation logic dynamically adapts to the selected board size.
 
 ---
 
-## 🎚️ Adjustable Difficulty
+## Adjustable Difficulty
 
 Users can control puzzle difficulty by adjusting the number of cells removed from a completed Sudoku board.
 
@@ -121,7 +121,7 @@ More Removed Cells
 
 ---
 
-## 🧠 Dynamic Sudoku Puzzle Generation
+## Dynamic Sudoku Puzzle Generation
 
 The application dynamically generates Sudoku puzzles instead of relying on predefined puzzle boards.
 
@@ -148,7 +148,7 @@ Validation is handled through the application's frontend and backend logic.
 
 ---
 
-## 🔌 REST API
+## REST API
 
 The frontend communicates with the Flask backend through REST API endpoints.
 
@@ -169,7 +169,7 @@ The API uses:
 
 ---
 
-## 🗄️ SQL Database Integration
+## SQL Database Integration
 
 SQL is used to persist application-related information.
 
@@ -217,7 +217,7 @@ Acts as the Flask application entry point and exposes the backend API endpoints.
 
 ---
 
-# ⚡ Dynamic Frontend
+# Dynamic Frontend
 
 JavaScript manages frontend interactions and communicates with the Flask backend using API requests.
 
@@ -255,7 +255,7 @@ The application dynamically updates the interface without requiring a complete p
 
 ---
 
-# 🏗️ Application Architecture
+# Application Architecture
 
 The application consists of three major layers.
 
@@ -316,7 +316,7 @@ The application consists of three major layers.
 
 ---
 
-# 🗄️ Database & SQL
+# Database & SQL
 
 SQL is used to provide persistent storage for player and game-related information.
 
@@ -355,7 +355,7 @@ created_at
 
 ---
 
-# 🧠 Sudoku Algorithm
+# Sudoku Algorithm
 
 The core Sudoku functionality is implemented using **constraint-based validation and solving techniques**.
 
@@ -423,7 +423,7 @@ The solver can be used to:
 
 ---
 
-# 🔌 REST API
+# REST API
 
 The frontend communicates with the Flask backend through REST API endpoints.
 
@@ -496,7 +496,7 @@ The player information can then be stored in the SQL database.
 
 ---
 
-# 🔄 Application Workflow
+# Application Workflow
 
 ```text
                   USER OPENS APPLICATION
@@ -597,7 +597,7 @@ SUDOKU-HTML/
 
 # 📸 Screenshots
 
-## 🏠 Main Application
+## Main Application
 
 The main interface provides the Sudoku game controls, board size selection, difficulty configuration, and interactive Sudoku grid.
 
@@ -613,7 +613,7 @@ The application validates the user's submitted solution and displays the corresp
 
 Player-related information can be managed through the backend API and persisted in the SQL database.
 
-## 🗄️ Database
+## Database
 
 The database stores persistent player and game-related information.
 
@@ -662,7 +662,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 🧪 API Testing
+# API Testing
 
 The REST API can be tested using:
 
@@ -740,7 +740,7 @@ The project provides practical experience in:
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 **Chhandavi Gowardhan**
 
