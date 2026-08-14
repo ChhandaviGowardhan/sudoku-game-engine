@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Sudoku Solver</title>
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    >
+    
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+<body>
+<div class="container">
+    <!-- =====================================================
+         HEADER
+        ===================================================== -->
+    <header>
+        <h1>🧩 Sudoku Solver</h1>
+        <p>
+            Generate, play, and solve Sudoku puzzles.
+        </p>
+    </header>
+    <!-- =====================================================
+         PUZZLE SETTINGS
+         ===================================================== -->
+    <section class="settings">
+        <div class="setting">
+            <label for="size">
+                Sudoku Size
+            </label>
+            <select id="size">
+                <option value="4">
+                    4 × 4
+                </option>
+                <option value="6">
+                    6 × 6
+                </option>
+                <option value="9" selected>
+                    9 × 9
+                </option>
+            </select>
+        </div>
+        <div class="setting">
+            <label for="removals">
+                Empty Cells
+            </label>
+            <input
+                type="range"
+                id="removals"
+                min="30"
+                max="50"
+                value="40"
+            >
+            <span id="removals-value">
+                40
+            </span>
+        </div>
+        <button id="generate-btn">
+            🎲 Generate Puzzle
+        </button>
+    </section>
+    <!-- =====================================================
+         TIMER + DIFFICULTY
+         ===================================================== -->
+    <section class="timer-section">
+    <div class="timer-item">
+        <span>
+            ⏱️ Time
+        </span>
+        <strong id="timer">
+            00:00
+        </strong>
+    </div>
+</section>
+<div class="best-time-card">
+    <span>Best Time</span>
+    <strong id="best-time">--:--</strong>
+</div>
+<!-- ============================================================
+     PLAYER
+     ============================================================ -->
+<div class="player-section">
+    <label for="username">Player Name</label>
+    <div class="player-input-row">
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your name"
+            maxlength="50">
+        <button id="player-btn">
+            Start Game
+        </button>
+    </div>
+    <div id="player-message"></div>
+</div>
+    <!-- =====================================================
+         SUDOKU BOARD
+         ===================================================== -->
+    <section>
+        <div id="sudoku-board"></div>
+    </section>
+    <!-- =====================================================
+         NUMBER PAD
+         ===================================================== -->
+    <section class="number-pad-section">
+        <h2>
+            Number Pad
+        </h2>
+        <div id="number-pad"></div>
+        <button
+            id="clear-btn"
+            class="secondary-btn"
+        >
+            ⌫ Clear
+        </button>
+    </section>
+    <!-- =====================================================
+         ACTIONS
+         ===================================================== -->
+    <section class="actions">
+        <button id="check-btn">
+            ✅ Check My Answer
+        </button>
+        <button
+            id="reset-btn"
+            class="secondary-btn"
+        >
+            🔄 Reset Puzzle
+        </button>
+    </section>
+    <!-- =====================================================
+         MESSAGE
+         ===================================================== -->
+    <div
+        id="message"
+        class="message hidden"
+    ></div>
+</div>
+<script
+    src="{{ url_for('static', filename='js/app.js') }}"
+></script>
+</body>
+</html>
